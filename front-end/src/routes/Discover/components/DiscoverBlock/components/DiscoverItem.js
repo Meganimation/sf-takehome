@@ -5,6 +5,7 @@ export default function DiscoverItem({ images, name }) {
   return (
     <div className="discover-item animate__animated animate__fadeIn">
       <div
+      onClick={()=>{alert(`Sorry! ${name} is currently unavailable! :()`)}}
         className="discover-item__art"
         style={{ backgroundImage: `url(${images[0].url})` }}
       />
