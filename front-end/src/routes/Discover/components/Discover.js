@@ -109,7 +109,7 @@ export default class Discover extends Component {
 
     return (
       <div className="discover">
-        {newReleases.loading ? <Loader /> : newReleases.error ? <ErrorMessage style={{      marginTop: '200px'}} error={newReleases.errorMsg} /> : <DiscoverBlock text="RELEASED THIS WEEK" id="released" {...newReleases} /> }
+        {newReleases.loading ? <Loader /> : newReleases.error ? <ErrorMessage error={newReleases.errorMsg} /> : <DiscoverBlock text="RELEASED THIS WEEK" id="released" {...newReleases} /> }
         {playlists.loading ?  <Loader /> : playlists.error ? <ErrorMessage error={playlists.errorMsg} /> : <DiscoverBlock text="FEATURED PLAYLISTS" id="featured" {...playlists} /> }
         {categories.loading ?  <Loader /> : categories.error ? <ErrorMessage error={categories.errorMsg} /> : <DiscoverBlock text="BROWSE" id="browse" imagesKey="icons" {...categories} /> }
       </div>
