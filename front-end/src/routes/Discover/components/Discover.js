@@ -109,7 +109,7 @@ export default class Discover extends Component {
 
     return (
       <div className="discover">
-        {newReleases.loading ? <Loader /> : newReleases.error ? <ErrorMessage error={newReleases.errorMsg} /> : <DiscoverBlock text="RELEASED THIS WEEK" id="released" {...newReleases} /> }
+        {newReleases.loading ? <Loader /> : newReleases.error ? <ErrorMessage style={{      marginTop: '200px'}} error={newReleases.errorMsg} /> : <DiscoverBlock text="RELEASED THIS WEEK" id="released" {...newReleases} /> }
         {playlists.loading ?  <Loader /> : playlists.error ? <ErrorMessage error={playlists.errorMsg} /> : <DiscoverBlock text="FEATURED PLAYLISTS" id="featured" {...playlists} /> }
         {categories.loading ?  <Loader /> : categories.error ? <ErrorMessage error={categories.errorMsg} /> : <DiscoverBlock text="BROWSE" id="browse" imagesKey="icons" {...categories} /> }
       </div>
@@ -122,8 +122,8 @@ function ErrorMessage({ error }) {
   return(
     <section style={{
       display: 'flex', 
-      justifyContent: 'center'}
-      }>
+      justifyContent: 'center'
+      }}>
         <div style={{
           position: 'absolute',
           height: '50px', 
@@ -133,7 +133,7 @@ function ErrorMessage({ error }) {
           >
             <h1 style={{fontSize: '50px', textAlign: 'center', color: 'white', margin: 'auto'}}>!</h1>
         </div>
-            <h3 style={{position: 'inherit', marginTop: '60px'}}>  {error.toString()} </h3>
+            <h3 style={{position: 'inherit', marginTop: '60px'}}> {error.toString()} </h3>
   </section>)
 
 }

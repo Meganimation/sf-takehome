@@ -62,6 +62,11 @@
       }
     }
 
+    &:hover{
+      background: linear-gradient(to right, $secondary-blue, transparent 95%);
+      cursor: pointer;
+    }
+
     &--selected {
       opacity: 1;
     }

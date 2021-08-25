@@ -14,6 +14,7 @@ function renderSideBarOption(link, icon, text, { selected } = {}) {
   return (
     <div
       className={cx('sidebar__option', { 'sidebar__option--selected': selected })}
+      onClick={()=>{alert(text ? 'This tab is currently unavailable :(' : null)}}
     >
       <FontAwesomeIcon icon={icon} />
       <p>{text}</p>
